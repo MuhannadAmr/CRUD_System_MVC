@@ -1,0 +1,13 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete @Model.FName @Model.LName User</h1>
+
+<form method="post" asp-action="ConfirmDelete">
+    <partial name="PartialViews/DetailsDeletePartialView" />
+    <input class="btn btn-danger" type="submit" value="Delete" />
+    <a class="btn btn-light" asp-action="Index">Back To List</a>
+</form>
+
